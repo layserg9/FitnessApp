@@ -1,6 +1,5 @@
 package com.vlados.retrofitapp
 
-import com.vlados.retrofitapp.Retrofit.Exercise
 import com.vlados.retrofitapp.Retrofit.ExerciseApi
 import com.vlados.retrofitapp.Retrofit.ExerciseListResponse
 import io.reactivex.Single

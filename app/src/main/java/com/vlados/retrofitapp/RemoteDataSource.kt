@@ -1,6 +1,5 @@
 package com.vlados.retrofitapp
 
-import com.vlados.retrofitapp.Retrofit.ExerciseApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -10,7 +9,7 @@ import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor() {
 
-    fun getClient(): Retrofit{
+    fun getClient(): Retrofit {
         val interceptor: HttpLoggingInterceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
 

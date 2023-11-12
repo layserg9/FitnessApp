@@ -6,7 +6,6 @@ import android.util.Log
 import com.vlados.retrofitapp.Retrofit.Exercise
 import com.vlados.retrofitapp.Retrofit.ExerciseListResponse
 import io.reactivex.Flowable
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
@@ -29,7 +28,7 @@ class ExerciseRepository @Inject constructor(
                         exerciseListResponse.results
                     )
                 },
-                { error -> Log.d("VLADIK_APP", "$error") }
+                { error -> Log.d("FITNESS_APP", "$error") }
             )
     }
 }

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.vlados.myownbottomnavigation.ExerciseAdapter
 import com.vlados.retrofitapp.databinding.ExerciseListFragmentBinding
 
-class TestFragment: Fragment() {
+class TestFragment : Fragment() {
     private var exerciseAdapter = ExerciseAdapter()
     private var bindingClass: ExerciseListFragmentBinding? = null
 
@@ -27,8 +27,6 @@ class TestFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         bindingClass?.elRecyclerView?.layoutManager = LinearLayoutManager(requireContext())
         bindingClass?.elRecyclerView?.adapter = exerciseAdapter
-//        exerciseAdapter.updateList(viewModel(создать во VM функцию, которая будет брать из репозитория список))
-
     }
 
     override fun onDestroyView() {
@@ -36,7 +34,7 @@ class TestFragment: Fragment() {
         bindingClass = null
     }
 
-    companion object{
+    companion object {
 
     }
 }

@@ -13,7 +13,6 @@ import io.reactivex.disposables.Disposables
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var requestDisposable = Disposables.disposed()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
