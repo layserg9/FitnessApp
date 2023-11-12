@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/exercise_list">
+
+    <fragment
+        android:id="@+id/exercise_list"
+        android:name="com.vlados.retrofitapp.ExerciseListFragment"
+        tools:layout="@layout/exercise_list_fragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/test_list"
+        android:name="com.vlados.retrofitapp.TestFragment"
+        tools:layout="@layout/test_list_fragment" >
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,872 @@
+{
+  "count": 1272,
+  "next": "https://wger.de/api/v2/exerciseinfo/?limit=20&offset=20",
+  "previous": null,
+  "results": [
+    {
+      "id": 345,
+      "name": "2 Handed Kettlebell Swing",
+      "aliases": [],
+      "uuid": "c788d643-150a-4ac7-97ef-84643c6419bf",
+      "exercise_base_id": 9,
+      "description": "<p>Two Handed Russian Style Kettlebell swing</p>",
+      "created": "2023-08-06T10:17:17.349574+02:00",
+      "category": {
+        "id": 10,
+        "name": "Abs"
+      },
+      "muscles": [],
+      "muscles_secondary": [],
+      "equipment": [
+        {
+          "id": 10,
+          "name": "Kettlebell"
+        }
+      ],
+      "language": {
+        "id": 2,
+        "short_name": "en",
+        "full_name": "English"
+      },
+      "license": {
+        "id": 2,
+        "full_name": "Creative Commons Attribution Share Alike 4",
+        "short_name": "CC-BY-SA 4",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      },
+      "license_author": "deusinvictus",
+      "images": [],
+      "videos": [],
+      "comments": [],
+      "variations": [
+        345,
+        249
+      ],
+      "author_history": [
+        "deusinvictus"
+      ]
+    },
+    {
+      "id": 2078,
+      "name": "3D lunge warmup",
+      "aliases": [],
+      "uuid": "bece2c5e-aadc-4d20-bde2-64b5b53f53f0",
+      "exercise_base_id": 1115,
+      "description": "As a warmup, use light dumbbells, one in each hand. Lunge in alternating directions, forward, sideways, backwards and 45 degree angles.",
+      "created": "2023-08-06T10:17:17.349574+02:00",
+      "category": {
+        "id": 15,
+        "name": "Cardio"
+      },
+      "muscles": [],
+      "muscles_secondary": [],
+      "equipment": [
+        {
+          "id": 3,
+          "name": "Dumbbell"
+        }
+      ],
+      "language": {
+        "id": 2,
+        "short_name": "en",
+        "full_name": "English"
+      },
+      "license": {
+        "id": 2,
+        "full_name": "Creative Commons Attribution Share Alike 4",
+        "short_name": "CC-BY-SA 4",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      },
+      "license_author": "philip",
+      "images": [],
+      "videos": [],
+      "comments": [],
+      "variations": [],
+      "author_history": [
+        "philip"
+      ]
+    },
+    {
+      "id": 1731,
+      "name": "4-count burpees",
+      "aliases": [],
+      "uuid": "66fe654d-3379-46e8-95dc-23e3ce56f25c",
+      "exercise_base_id": 997,
+      "description": "<p>Starting position:</p><p>Stand straight, feet hip-width apart.</p><p>Steps:</p><ol><li>Squat low and support yourself on the floor with your hands between the knees and in front of your feet, your back straight.</li><li>Keeping your hands on the floor, jump your legs backward into high plank position.</li><li>Jump your feet forward to return to the squat position.</li><li>Repeat.</li></ol>",
+      "created": "2023-08-06T10:17:17.349574+02:00",
+      "category": {
+        "id": 11,
+        "name": "Chest"
+      },
+      "muscles": [],
+      "muscles_secondary": [],
+      "equipment": [
+        {
+          "id": 7,
+          "name": "none (bodyweight exercise)"
+        }
+      ],
+      "language": {
+        "id": 2,
+        "short_name": "en",
+        "full_name": "English"
+      },
+      "license": {
+        "id": 2,
+        "full_name": "Creative Commons Attribution Share Alike 4",
+        "short_name": "CC-BY-SA 4",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      },
+      "license_author": "Miroslav Mazel (imported from Feeel)",
+      "images": [],
+      "videos": [],
+      "comments": [],
+      "variations": [],
+      "author_history": [
+        "mondstern (imported from Feeel)",
+        "Miroslav Mazel (imported from Feeel)"
+      ]
+    },
+    {
+      "id": 1728,
+      "name": "4-Hitung burpe",
+      "aliases": [],
+      "uuid": "ac741b46-6d5f-4f33-89b3-7930fa9bac6a",
+      "exercise_base_id": 997,
+      "description": "<p>Posisi awal:</p><p>Berdiri tegak, kaki selebar pinggul.</p><p>Langkah:</p><ol><li>Jongkok rendah dan dukung diri anda di lantai dengan tangan di antara lutut dan di depan kaki, punggung lurus.</li><li>Menjaga tangan Anda di lantai, melompat kaki Anda ke belakang ke posisi papan tinggi.</li><li>Lompat kaki Anda ke depan untuk kembali ke posisi jongkok.</li><li>Ulangi.</li></ol>",
+      "created": "2023-08-06T10:17:17.349574+02:00",
+      "category": {
+        "id": 11,
+        "name": "Chest"
+      },
+      "muscles": [],
+      "muscles_secondary": [],
+      "equipment": [
+        {
+          "id": 7,
+          "name": "none (bodyweight exercise)"
+        }
+      ],
+      "language": {
+        "id": 23,
+        "short_name": "id",
+        "full_name": "Bahasa Indonesia"
+      },
+      "license": {
+        "id": 2,
+        "full_name": "Creative Commons Attribution Share Alike 4",
+        "short_name": "CC-BY-SA 4",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      },
+      "license_author": "mondstern (imported from Feeel)",
+      "images": [],
+      "videos": [],
+      "comments": [],
+      "variations": [],
+      "author_history": [
+        "Reza Almanda (imported from Feeel)",
+        "mondstern (imported from Feeel)"
+      ]
+    },
+    {
+      "id": 1734,
+      "name": "4-tel burpees",
+      "aliases": [],
+      "uuid": "8b52efb2-52cb-4301-9a2c-c5a8570e3519",
+      "exercise_base_id": 997,
+      "description": "<p>Beginpositie:</p><p>Sta recht, voeten
+      op
+      heupbreedte
+      uit
+      elkaar.</p><p>Stappen: </p><ol><li>Hurk
+      laag
+      en
+      ondersteun
+      jezelf
+      op
+      de
+      vloer
+      met
+      je
+      handen
+      tussen
+      de
+      knieën
+      en
+      voor
+      je
+      voeten,
+      je
+      rug
+      recht.</li><li>Houd
+      je
+      handen
+      op
+      de
+      vloer,
+      spring
+      je
+      benen
+      naar
+      achteren
+      in
+      een
+      hoge
+      plankpositie.</li><li>Spring
+      met
+      je
+      voeten
+      naar
+      voren
+      om
+      terug
+      te
+      keren
+      naar
+      de
+      squat
+      positie.</li><li>Herhaal.</li></ol>
+      ","
+      created
+      ":"
+      2023-08-06T10: 17
+      :
+      17.349574
+      +
+      02: 00
+      ","
+      category
+      ":{"
+      id
+      ":11,"
+      name
+      ":"
+      Chest
+      "},"
+      muscles
+      ":[],"
+      muscles_secondary
+      ":[],"
+      equipment
+      ":[{"
+      id
+      ":7,"
+      name
+      ":"
+      none
+      (bodyweight
+      exercise)
+      "}],"
+      language
+      ":{"
+      id
+      ":6,"
+      short_name
+      ":"
+      nl
+      ","
+      full_name
+      ":"
+      Nederlands
+      "},"
+      license
+      ":{"
+      id
+      ":2,"
+      full_name
+      ":"
+      Creative
+      Commons
+      Attribution
+      Share
+      Alike
+      4
+      ","
+      short_name
+      ":"
+      CC-BY-SA
+      4
+      ","
+      url
+      ":"
+      https: //creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"mondstern (imported from Feeel)","images":[],"videos":[],"comments":[],"variations":[],"author_history":["Heimen Stoffels (imported from Feeel)","Daan Vervacke (imported from Feeel)","mondstern (imported from Feeel)","J. Lavoie (imported from Feeel)","floris van den bosch (imported from Feeel)"]},{"id":1737,"name":"4-العد burpees","aliases":[],"uuid":"5e1701af-7e33-4564-bdfe-3e1260afc204","exercise_base_id":997,"description":"<p>وضع البداية:</p><p>الوقوف بشكل مستقيم ، والقدمين متباعدتين.</p><p>الخطوات:</p><ol><li>اجلس منخفضًا وادعم نفسك على الأرض بيديك بين الركبتين وأمام قدميك ، وظهرك مستقيم.</li><li>إبقاء يديك على الأرض ، قفز ساقيك إلى الوراء في وضع اللوح الخشبي العالي.</li><li>اقفز قدميك للأمام للعودة إلى وضعية القرفصاء.</li><li>كرر.</li></ol>","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":11,"name":"Chest"},"muscles":[],"muscles_secondary":[],"equipment":[{"id":7,"name":"none (bodyweight exercise)"}],"language":{"id":17,"short_name":"ar","full_name":"اَللُّغَةُ اَلْعَرَبِيَّة"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"Rex_sa (imported from Feeel)","images":[],"videos":[],"comments":[],"variations":[],"author_history":["Rex_sa (imported from Feeel)"]},{"id":1316,"name":"Abdominal","aliases":[],"uuid":"332b844f-816c-486d-8ef4-f58517514061","exercise_base_id":167,"description":"<ol><li>Deite-se de barriga para cima no chão com os joelhos dobrados.</li><li>Curve os ombros em direção a pélvis. As mãos podem ficar atrás ou do lado do pescoço ou cruzadas sobre o peito.</li><li>Repita</li></ol>","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":10,"name":"Abs"},"muscles":[{"id":6,"name":"Rectus abdominis","name_en":"Abs","is_front":true,"image_url_main":"/static/images/muscles/main/muscle-6.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-6.svg"}],"muscles_secondary":[{"id":3,"name":"Serratus anterior","name_en":"","is_front":true,"image_url_main":"/static/images/muscles/main/muscle-3.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-3.svg"}],"equipment":[{"id":4,"name":"Gym mat"}],"language":{"id":7,"short_name":"pt","full_name":"Português"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"gbpu (imported from Feeel)","images":[{"id":3,"uuid":"ef0b00e2-3323-4e7f-88fe-d71ef34b3384","exercise_base":167,"exercise_base_uuid":"b186f1f8-4957-44dc-bf30-d0b00064ce6f","image":"https://wger.de/media/exercise-images/91/Crunches-1.png","is_main":true,"style":"1","license":1,"license_title":"","license_object_url":"","license_author":"","license_author_url":"","license_derivative_source_url":"","author_history":[]},{"id":4,"uuid":"0fdc1eea-07d1-4d01-8d89-6c39673dcbed","exercise_base":167,"exercise_base_uuid":"b186f1f8-4957-44dc-bf30-d0b0006
+      l
+      ":"
+      ","
+      license_derivative_source_url
+      ":"
+      ","
+      author_history
+      ":[]}],"
+      videos
+      ":[],"
+      comments
+      ":[],"
+      variations
+      ":[1316],"
+      author_history
+      ":["
+      Vinicius
+      Rodrigues
+      (imported
+      from
+      Feeel)
+      ","
+      flexagoon
+      (imported
+      from
+      Feeel)
+      ","
+      mondstern
+      (imported
+      from
+      Feeel)
+      ","
+      Rodolfo
+      Candido
+      (imported
+      from
+      Feeel)
+      ","
+      Eduardo
+      Celino
+      (imported
+      from
+      Feeel)
+      ","
+      gbpu
+      (imported
+      from
+      Feeel)
+      "]},{"
+      id
+      ":2083,"
+      name
+      ":"
+      Abdominales
+      ","
+      aliases
+      ":[],"
+      uuid
+      ":"
+      30d08ec5-56cf-4fcc-bc78-0aec097006cd
+      ","
+      exercise_base_id
+      ":591,"
+      description
+      ":"
+      Siéntese
+      en
+      una
+      colchoneta,
+      sus
+      pantorrillas
+      descansan
+      en
+      un
+      banco,
+      las
+      rodillas
+      forman
+      un
+      ángulo
+      recto.
+      Mantenga
+      sus
+      manos
+      detrás
+      de
+      su
+      cuello.
+      Sube
+      ahora
+      con
+      un
+      movimiento
+      de
+      balanceo
+      de
+      tu
+      espalda,
+      debes
+      sentir
+      cómo
+      las
+      vértebras
+      individuales
+      pierden
+      contacto
+      con
+      la
+      colchoneta.
+      En
+      el
+      punto
+      más
+      alto,
+      contrae
+      los
+      abdominales
+      tanto
+      como
+      puedas
+      y
+      mantenlos
+      allí
+      durante
+      2
+      segundos.
+      Baja
+      ahora,
+      desenrollando
+      tu
+      espalda.
+      ","
+      created
+      ":"
+      2023-08-06T10: 17
+      :
+      17.349574
+      +
+      02: 00
+      ","
+      category
+      ":{"
+      id
+      ":10,"
+      name
+      ":"
+      Abs
+      "},"
+      muscles
+      ":[{"
+      id
+      ":6,"
+      name
+      ":"
+      Rectus
+      abdominis
+      ","
+      name_en
+      ":"
+      Abs
+      ","
+      is_front
+      ":true,"
+      image_url_main
+      ":"
+      /static/images/muscles/main/muscle-6.svg
+      ","
+      image_url_secondary
+      ":"
+      /static/images/muscles/secondary/muscle-6.svg
+      "}],"
+      muscles_secondary
+      ":[],"
+      equipment
+      ":[],"
+      language
+      ":{"
+      id
+      ":4,"
+      short_name
+      ":"
+      es
+      ","
+      full_name
+      ":"
+      Español
+      "},"
+      license
+      ":{"
+      id
+      ":2,"
+      full_name
+      ":"
+      Creative
+      Commons
+      Attribution
+      Share
+      Alike
+      4
+      ","
+      short_name
+      ":"
+      CC-BY-SA
+      4
+      ","
+      url
+      ":"
+      https: //creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"Franpol","images":[{"id":367,"uuid":"aca68eb7-b924-4ff1-a76b-7e075c73ec0c","exercise_base":591,"exercise_base_uuid":"f38e9c23-031d-44d0-ac27-7f1026212c73","image":"https://wger.de/media/exercise-images/591/aca68eb7-b924-4ff1-a76b-7e075c73ec0c.png","is_main":true,"style":"4","license":2,"license_title":"","license_object_url":"","license_author":"Franpol","license_author_url":"","license_derivative_source_url":"","author_history":["Franpol"]}],"videos":[],"comments":[],"variations":[1311,2083],"author_history":["Franpol"]},{"id":1311,"name":"Abdominales","aliases":[],"uuid":"ca89f09f-e7d0-4490-bf43-b539fd86c6ee","exercise_base_id":167,"description":"<ol><li>Acuéstese boca arriba en el suelo con las rodillas dobladas.</li><li>Flexione los hombros hacia la pelvis. Las manos pueden estar detrás o al costado del cuello o cruzadas sobre el pecho.</li><li>Repita</li></ol>","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":10,"name":"Abs"},"muscles":[{"id":6,"name":"Rectus abdominis","name_en":"Abs","is_front":true,"image_url_main":"/static/images/muscles/main/muscle-6.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-6.svg"}],"muscles_secondary":[{"id":3,"name":"Serratus anterior","name_en":"","is_front":true,"image_url_main":"/static/images/muscles/main/muscle-3.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-3.svg"}],"equipment":[{"id":4,"name":"Gym mat"}],"language":{"id":4,"short_name":"es","full_name":"Español"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"Luis Alfredo Figueroa Bracamontes (imported from Feeel)","images":[{"id":3,"uuid":"ef0b00e2-3323-4e7f-88fe-d71ef34b3384","exercise_base":167,"exercise_base_uuid":"b186f1f8-4957-44dc-bf30-d0b00064ce6f","image":"https://wger.de/media/exercise-images/91/Crunches-1.png","is_main":true,"style":"1","license":1,"license_title":"","license_object_url":"","license_author":"","license_author_url":"","license_derivative_source_url":"","author_history":[]},{"id":4,"uuid":"0fdc1eea-07d1-4d01-8d89-6c39673dcbed","exercise_base":167,"exercise_base_uuid":"b186f1f8-4957-44dc-bf30-d0b00064ce6f","image":"https://wger.de/media/exercise-images/91/Crunches-2.png","is_main":false,"style":"1","license":1,"license_title":"","license_object_url":"","license_author":"Everkinetic","license_author_url":"","license_derivative_source_url":"","author_history":[]}],"videos":[],"comments
+      ":[],"
+      variations
+      ":[1311,2083],"
+      author_history
+      ":["
+      Gabriel
+      Tandil
+      (imported
+      from
+      Feeel)
+      ","
+      Luis
+      Alfredo
+      Figueroa
+      Bracamontes
+      (imported
+      from
+      Feeel)
+      ","
+      mondstern
+      (imported
+      from
+      Feeel)
+      ","
+      Diego
+      Sanguinetti
+      (imported
+      from
+      Feeel)
+      "]},{"
+      id
+      ":2145,"
+      name
+      ":"
+      Abdominales
+      sovieticas
+      ","
+      aliases
+      ":[],"
+      uuid
+      ":"
+      5be194a2-42db-491b-9789-16dc23754c64
+      ","
+      exercise_base_id
+      ":1189,"
+      description
+      ":"
+      sentado
+      en
+      el
+      suelo
+      agarramos
+      la
+      pesa
+      rusa,
+      flexionamos
+      las
+      piernas
+      y
+      las
+      separamos
+      del
+      suelo.
+      Ahora
+      llevaremos
+      a
+      un
+      lado
+      y
+      otro
+      la
+      pesa
+      ","
+      created
+      ":"
+      2023-08-06T10: 17
+      :
+      17.349574
+      +
+      02: 00
+      ","
+      category
+      ":{"
+      id
+      ":10,"
+      name
+      ":"
+      Abs
+      "},"
+      muscles
+      ":[{"
+      id
+      ":6,"
+      name
+      ":"
+      Rectus
+      abdominis
+      ","
+      name_en
+      ":"
+      Abs
+      ","
+      is_front
+      ":true,"
+      image_url_main
+      ":"
+      /static/images/muscles/main/muscle-6.svg
+      ","
+      image_url_secondary
+      ":"
+      /static/images/muscles/secondary/muscle-6.svg
+      "}],"
+      muscles_secondary
+      ":[],"
+      equipment
+      ":[{"
+      id
+      ":10,"
+      name
+      ":"
+      Kettlebell
+      "}],"
+      language
+      ":{"
+      id
+      ":2,"
+      short_name
+      ":"
+      en
+      ","
+      full_name
+      ":"
+      English
+      "},"
+      license
+      ":{"
+      id
+      ":2,"
+      full_name
+      ":"
+      Creative
+      Commons
+      Attribution
+      Share
+      Alike
+      4
+      ","
+      short_name
+      ":"
+      CC-BY-SA
+      4
+      ","
+      url
+      ":"
+      https: //creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":null,"images":[{"id":422,"uuid":"3bdbbafd-17eb-4226-abba-222a782ae97e","exercise_base":1189,"exercise_base_uuid":"75e2bca9-8d12-4d7f-b27f-a8c6f8be8ded","image":"https://wger.de/media/exercise-images/1189/3bdbbafd-17eb-4226-abba-222a782ae97e.jpg","is_main":true,"style":"4","license":2,"license_title":"","license_object_url":"","license_author":null,"license_author_url":"","license_derivative_source_url":"","author_history":[]}],"videos":[],"comments":[],"variations":[2145],"author_history":[]},{"id":1061,"name":"Abdominal Stabilization","aliases":[],"uuid":"60d8018d-296f-4c62-a80b-f609a25d34ea","exercise_base_id":56,"description":"","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":10,"name":"Abs"},"muscles":[{"id":6,"name":"Rectus abdominis","name_en":"Abs","is_front":true,"image_url_main":"/static/images/muscles/main/muscle-6.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-6.svg"}],"muscles_secondary":[{"id":14,"name":"Obliquus externus abdominis","name_en":"","is_front":true,"image_url_main":"/static/images/muscles/main/muscle-14.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-14.svg"}],"equipment":[{"id":4,"name":"Gym mat"}],"language":{"id":2,"short_name":"en","full_name":"English"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"wger.de","images":[],"videos":[],"comments":[],"variations":[],"author_history":["wger.de"]},{"id":1312,"name":"Abdominaux","aliases":[],"uuid":"5973bc39-5589-436d-aa68-f0cb22b6f385","exercise_base_id":167,"description":"<ol><li>Allongez-vous sur le sol, face contre terre, genoux pliés.</li><li>Courbez les épaules vers le bassin. Les mains peuvent être derrière ou à côté du cou ou croisées sur la poitrine.</li><li>Répétez</li></ol>","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":10,"name":"Abs"},"muscles":[{"id":6,"name":"Rectus abdominis","name_en":"Abs","is_front":true,"image_url_main":"/static/images/muscles/main/muscle-6.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-6.svg"}],"muscles_secondary":[{"id":3,"name":"Serratus anterior","name_en":"","is_front":true,"image_url_main":"/static/images/muscles/main/muscle-3.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-3.svg"}],"equipment":[{"id":4,"name":"Gym mat"}],"language":{"id":12,"short_name":"fr","full_name":"Français"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"Miroslav Mazel (imported from Feeel)","images":[{"id":3,"uuid":"ef0b00e2-3323-4e7f-88fe-d71ef34b3384","exercise_base":167,"exercise_base_uuid":"b186f1f8-4957-44dc-bf30-d0b00064ce6f","image":"https://wger.de/media/exercise-images/91/C
+      runches-1.png
+      ","
+      is_main
+      ":true,"
+      style
+      ":"
+      1
+      ","
+      license
+      ":1,"
+      license_title
+      ":"
+      ","
+      license_object_url
+      ":"
+      ","
+      license_author
+      ":"
+      ","
+      license_author_url
+      ":"
+      ","
+      license_derivative_source_url
+      ":"
+      ","
+      author_history
+      ":[]},{"
+      id
+      ":4,"
+      uuid
+      ":"
+      0fdc1eea-07d1-4d01-8d89-6c39673dcbed
+      ","
+      exercise_base
+      ":167,"
+      exercise_base_uuid
+      ":"
+      b186f1f8-4957-44dc-bf30-d0b00064ce6f
+      ","
+      image
+      ":"
+      https: //wger.de/media/exercise-images/91/Crunches-2.png","is_main":false,"style":"1","license":1,"license_title":"","license_object_url":"","license_author":"Everkinetic","license_author_url":"","license_derivative_source_url":"","author_history":[]}],"videos":[],"comments":[],"variations":[1312],"author_history":["Maxime Leroy (imported from Feeel)","mondstern (imported from Feeel)","Jonathan D. (imported from Feeel)","Miroslav Mazel (imported from Feeel)","Clément Mondon (imported from Feeel)","J. Lavoie (imported from Feeel)"]},{"id":2056,"name":"Abduktion im Stand","aliases":[],"uuid":"8d125c27-f531-4caa-89da-7dc20bebfa49","exercise_base_id":1097,"description":"Das Training des stabilen Standes dominat auf einem Bein ist beiseitig entscheidend. Einerseits um Beschwerden vorzubeugen und andererseits um eine stabile Basis zu legen.Die übende Person stellt sich in die gewohnte Standposition und versucht bei stabilem Oberkörper das unbelastete Bein wiederholt zu heben und und in Hüfte und Knie zu beugen und wieder zu senken. Die Bewegung wird jedenfalls auch mit der anderen Seite wiederholt.\nDie Übung trainiert die Stabilität der hüftumgebenden Muskulatur","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":9,"name":"Legs"},"muscles":[],"muscles_secondary":[],"equipment":[{"id":7,"name":"none (bodyweight exercise)"}],"language":{"id":2,"short_name":"en","full_name":"English"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"tregga","images":[],"videos":[],"comments":[{"id":152,"exercise":2056,"comment":"stabiler Oberkörper"}],"variations":[],"author_history":["tregga"]},{"id":2055,"name":"Abduktion im Stand","aliases":[],"uuid":"5eda0a41-3a58-4424-acdb-5a02a4e5c113","exercise_base_id":1096,"description":"Das Training des stabilen Standes dominat auf einem Bein ist beiseitig entscheidend. Einerseits um Beschwerden vorzubeugen und andererseits um eine stabile Basis zu legen.Die übende Person stellt sich in die gewohnte Standposition und versucht bei stabilem Oberkörper das unbelastete Bein wiederholt zu heben und und in Hüfte und Knie zu beugen und wieder zu senken. Die Bewegung wird jedenfalls auch mit der anderen Seite wiederholt.\nDie Übung trainiert die Stabilität der hüftumgebenden Muskulatur","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":9,"name":"Legs"},"muscles":[],"muscles_secondary":[],"equipment":[{"id":7,"name":"none (bodyweight exercise)"}],"language":{"id":2,"short_name":"en","full_name":"English"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"tregga","images":[],"videos":[],"comments":[{"id":151,"exercise":2055,"comment":"stabiler Oberkörper"}],"variations":[],"author_history":["tregga"]},{"id":174,"name":"Abduktoren-Maschine","aliases":[],"uuid":"99881bdd-43d7-4c3b-82ed-9c187d0455b7","exercise_base_id":12,"description":"<ul>\n<li>in eine aufrechte Position setzen, bei der die Beine hüftbreit geöffnet sind</li>\n<li>den Rücken, die Knie und die Oberschenkelaußenseite an die jeweiligen Polster pressen</li>\n<li>mit den Händen an den Griffen festhalten</li>\n<li>die Oberschenkel bis zum Anschlagpunkt der Hebelarme auseinander drücken</li>\n<li>danach die Beine wieder zusammen führen</li>\n<li>das Gesäß nicht vom Sitz abheben</li>\n<li>beim Auseinanderdrücken der Hebelarme aus- und beim Zusammenführen einatmen</li>\n</ul>","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":9,"name
+      ":"
+      Legs
+      "},"
+      muscles
+      ":[{"
+      id
+      ":8,"
+      name
+      ":"
+      Gluteus
+      maximus
+      ","
+      name_en
+      ":"
+      Glutes
+      ","
+      is_front
+      ":false,"
+      image_url_main
+      ":"
+      /static/images/muscles/main/muscle-8.svg
+      ","
+      image_url_secondary
+      ":"
+      /static/images/muscles/secondary/muscle-8.svg
+      "}],"
+      muscles_secondary
+      ":[],"
+      equipment
+      ":[],"
+      language
+      ":{"
+      id
+      ":1,"
+      short_name
+      ":"
+      de
+      ","
+      full_name
+      ":"
+      Deutsch
+      "},"
+      license
+      ":{"
+      id
+      ":1,"
+      full_name
+      ":"
+      Creative
+      Commons
+      Attribution
+      Share
+      Alike
+      3
+      ","
+      short_name
+      ":"
+      CC-BY-SA
+      3
+      ","
+      url
+      ":"
+      https: //creativecommons.org/licenses/by-sa/3.0/deed.en"},"license_author":"flori","images":[],"videos":[{"id":74,"uuid":"5148c579-5df2-4618-9a7b-a2e29ac4dd7d","exercise_base":12,"exercise_base_uuid":"53906cd1-61f1-4d56-ac60-e4fcc5824861","video":"https://wger.de/media/exercise-video/12/5148c579-5df2-4618-9a7b-a2e29ac4dd7d.MOV","is_main":false,"size":60138928,"duration":"20.86","width":1920,"height":1080,"codec":"hevc","codec_long":"H.265 / HEVC (High Efficiency Video Coding)","license":2,"license_title":"","license_object_url":"","license_author":"Goulart","license_author_url":"","license_derivative_source_url":"","author_history":["Goulart"]}],"comments":[],"variations":[],"author_history":["flori"]},{"id":1906,"name":"Abwechselnde Bizepscurls","aliases":[],"uuid":"afd72ed7-5ca8-47a8-ae8f-5f24679b995c","exercise_base_id":1012,"description":"<p>Ausgangsposition:</p><p>Beginnen Sie im Stehen mit Kurzhanteln in jeder Hand, mit geradem Rücken und hüftbreit auseinander stehenden Füßen. Die Arme sind entspannt und zeigen nach unten. Die Knie sollten leicht gebeugt, die Bauchmuskeln angespannt und die Schultern nach unten gerichtet sein.</p><p>Die Schritte:</p><ol><li>Beugen Sie einen Arm am Ellenbogen und führen Sie die Hantel bis zur Schulter. Ihr Oberarm sollte während dieser Bewegung unbeweglich bleiben.</li><li>Bringen Sie die Hantel wieder nach unten, bis sich Ihr Arm in seiner ursprünglichen, entspannten Position befindet.</li><li>Wiederholen Sie die Übung mit dem anderen Arm.</li></ol>","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":8,"name":"Arms"},"muscles":[],"muscles_secondary":[],"equipment":[{"id":3,"name":"Dumbbell"}],"language":{"id":1,"short_name":"de","full_name":"Deutsch"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"Miroslav Mazel (imported from Feeel)","images":[{"id":406,"uuid":"8270fdb8-28f1-4eff-b410-af8642085b3f","exercise_base":1012,"exercise_base_uuid":"a136959c-b0c8-49d3-99b9-0a5f41abf00e","image":"https://wger.de/media/exercise-images/1012/8270fdb8-28f1-4eff-b410-af8642085b3f.png","is_main":true,"style":"4","license":2,"license_title":"","license_object_url":"","license_author":"Franpol","license_author_url":"","license_derivative_source_url":"","author_history":["Franpol"]}],"videos":[],"comments":[],"variations":[],"author_history":["mondstern (imported from Feeel)","Miroslav Mazel (imported from Feeel)"]},{"id":1457,"name":"Accroupi","aliases":[],"uuid":"8fc3f256-2dbc-4236-b32f-08c00b6d0c36","exercise_base_id":615,"description":"<ol><li>Debout, les pieds écartés à la largeur des épaules</li><li>Déplacez les hanches vers l'arrière et pliez les genoux et les hanches pour abaisser le torse.</li><li>Répétez</li></ol>","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":9,"name":"Legs"},"muscles":[{"id":10,"name":"Quadriceps femoris","name_en":"Quads","is_front":true,"image_url_main":"/static/images/muscles/main/muscle-10.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-10.svg"}],"muscles_secondary":[{"id":8,"name":"Gluteus maximus","name_en":"Glutes","is_front":false,"image_url_main":"/static/images/muscles/main/muscle-8.svg","image_url_secondary":"/static/images/muscles/secondary/muscle-8.svg"}],"equipment":[{"id":1,"name":"Barbell"}],"language":{"id":12,"short_name":"fr","full_name":"Français"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"htt
+      ps
+      :
+      //creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"Miroslav Mazel (imported from Feeel)","images":[{"id":151,"uuid":"a067edbd-c5e9-42be-8ce3-238c0a4760f6","exercise_base":615,"exercise_base_uuid":"a2f5b6ef-b780-49c0-8d96-fdaff23e27ce","image":"https://wger.de/media/exercise-images/111/Wide-stance-squat-2.gif","is_main":true,"style":"1","license":1,"license_title":"","license_object_url":"","license_author":"Everkinetic","license_author_url":"","license_derivative_source_url":"","author_history":[]},{"id":152,"uuid":"dd63c466-ea7e-47f4-b1b2-8a50b4656dfc","exercise_base":615,"exercise_base_uuid":"a2f5b6ef-b780-49c0-8d96-fdaff23e27ce","image":"https://wger.de/media/exercise-images/111/Wide-stance-squat-1.gif","is_main":false,"style":"1","license":1,"license_title":"","license_object_url":"","license_author":"Everkinetic","license_author_url":"","license_derivative_source_url":"","author_history":[]}],"videos":[],"comments":[],"variations":[1940,1367,1437,1447,1457,1471],"author_history":["Maxime Leroy (imported from Feeel)","mondstern (imported from Feeel)","Jonathan D. (imported from Feeel)","Miroslav Mazel (imported from Feeel)","Clément Mondon (imported from Feeel)","J. Lavoie (imported from Feeel)"]},{"id":1888,"name":"Achternek rekken","aliases":[],"uuid":"6cff873b-59a1-4a1c-a2f6-107e6927f208","exercise_base_id":1010,"description":"<p>Beginpositie:</p><p>Zit rechtop op een stoel of een stevig kussen.</p><p>Stappen:</p><ol><li>Adem uit en kantel uw hoofd naar voren, kin naar de borst, waarbij u de handen achter uw hoofd plaatst.</li><li>Gebruik uw handen om uw hoofd heel licht naar beneden te trekken. Houd 5 seconden vast.</li><li><ol start=\"3\"><li>Trek de schouders naar achteren en naar beneden met behulp van de spieren in uw rug. Dit zou de nek meer moeten strekken. Houd 5 seconden vast.</li></ol></li><li>Duw nu zachtjes uw hoofd terug omhoog, terwijl u het ook naar beneden trekt met uw handen. Balanceer beide krachten zodat uw hoofd niet beweegt. Houd dit minstens 5 seconden vast.</li><li>Breng uw vingers naar uw voorhoofd en gebruik ze om uw hoofd zachtjes terug in de oorspronkelijke positie te brengen.</li></ol>","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":12,"name":"Back"},"muscles":[],"muscles_secondary":[],"equipment":[{"id":7,"name":"none (bodyweight exercise)"}],"language":{"id":6,"short_name":"nl","full_name":"Nederlands"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"mondstern (imported from Feeel)","images":[],"videos":[],"comments":[],"variations":[],"author_history":["Heimen Stoffels (imported from Feeel)","Daan Vervacke (imported from Feeel)","mondstern (imported from Feeel)","J. Lavoie (imported from Feeel)","floris van den bosch (imported from Feeel)"]},{"id":1706,"name":"Achterwaartse arm cirkels","aliases":[],"uuid":"40a525d5-27ac-4cef-8c87-5366f5a4b6d3","exercise_base_id":995,"description":"<ol><li>Ga rechtop staan met een rechte rug.</li><li>Houd je armen recht, houd ze voor je, hef ze boven je hoofd, zet de beweging voort tot achter je rug en naar beneden naar de beginpositie</li><li>Blijf je armen cirkelen zoals beschreven in stap 2.</li></ol>","created":"2023-08-06T10:17:17.349574+02:00","category":{"id":8,"name":"Arms"},"muscles":[],"muscles_secondary":[],"equipment":[{"id":7,"name":"none (bodyweight exercise)"}],"language":{"id":6,"short_name":"nl","full_name":"Nederlands"},"license":{"id":2,"full_name":"Creative Commons Attribution Share Alike 4","short_name":"CC-BY-SA 4","url":"https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"mondstern (imported from Feeel)","images":[],"videos":[],"comments":[],"variations":[1693,1706],"author_history":["Heimen Stoffels (imported from Feeel)","Daan Vervacke (imported from Feeel)","mondstern (imported from Feeel)","J. Lavoie (imported from Feeel)","floris van den
+      bosch
+      (imported
+      from
+      Feeel)
+      "]},{"
+      id
+      ":1830,"
+      name
+      ":"
+      Achterwaartse
+      schouder
+      draaiing
+      ","
+      aliases
+      ":[],"
+      uuid
+      ":"
+      02b6fd19-5be2-474c-b268-939d4e82cefc
+      ","
+      exercise_base_id
+      ":1005,"
+      description
+      ":"
+      <p>Beginpositie: </p><p>Zit
+      of
+      sta
+      met
+      rechte
+      rug.</p><p>Stappen: </p><ol><li>Plaats
+      uw
+      handen
+      op
+      uw
+      schouders.</li><li>Roteer
+      herhaaldelijk
+      beide
+      schoudergewrichten
+      in
+      een
+      cirkelvormige
+      beweging
+      in
+      een
+      gematigd
+      tempo.</li></ol>
+      ","
+      created
+      ":"
+      2023-08-06T10: 17
+      :
+      17.349574
+      +
+      02: 00
+      ","
+      category
+      ":{"
+      id
+      ":12,"
+      name
+      ":"
+      Back
+      "},"
+      muscles
+      ":[],"
+      muscles_secondary
+      ":[],"
+      equipment
+      ":[{"
+      id
+      ":7,"
+      name
+      ":"
+      none
+      (bodyweight
+      exercise)
+      "}],"
+      language
+      ":{"
+      id
+      ":6,"
+      short_name
+      ":"
+      nl
+      ","
+      full_name
+      ":"
+      Nederlands
+      "},"
+      license
+      ":{"
+      id
+      ":2,"
+      full_name
+      ":"
+      Creative
+      Commons
+      Attribution
+      Share
+      Alike
+      4
+      ","
+      short_name
+      ":"
+      CC-BY-SA
+      4
+      ","
+      url
+      ":"
+      https://creativecommons.org/licenses/by-sa/4.0/deed.en"},"license_author":"mondstern (imported from Feeel)","images":[],"videos":[],"comments":[],"variations":[1818,1830],"author_history":["Heimen Stoffels (imported from Feeel)","Daan Vervacke (imported from Feeel)","mondstern (imported from Feeel)","J. Lavoie (imported from Feeel)","floris van den bosch (imported from Feeel)"]}]}
