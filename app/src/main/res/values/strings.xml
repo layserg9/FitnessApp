@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">RetrofitApp</string>
+    <string-array name="weekdays">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+    </string-array>
 </resources>

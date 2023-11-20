@@ -4,28 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestFragment">
+    tools:context=".ui.TestFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tl_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical"
+
+    <TextView
+        android:id="@+id/tl_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView Loren sdfsdfsdfsdfsdfdsfd sdf sdf sdf sd fsd fsd fsd f"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tl_buttonAdd"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#813333"
-        android:text="Add TEST"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tl_recycler_view"
-        app:layout_constraintStart_toStartOf="@+id/tl_recycler_view" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

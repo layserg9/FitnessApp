@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/exercise_list"
-        android:name="com.vlados.retrofitapp.ExerciseListFragment"
+        android:name="com.vlados.retrofitapp.ui.ExerciseListFragment"
         tools:layout="@layout/exercise_list_fragment" >
     </fragment>
 
     <fragment
         android:id="@+id/test_list"
-        android:name="com.vlados.retrofitapp.TestFragment"
+        android:name="com.vlados.retrofitapp.ui.TestFragment"
         tools:layout="@layout/test_list_fragment" >
     </fragment>
 
