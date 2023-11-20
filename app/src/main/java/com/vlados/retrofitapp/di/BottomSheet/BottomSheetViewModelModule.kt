@@ -2,7 +2,7 @@ package com.vlados.retrofitapp.di.BottomSheet
 
 import com.vlados.retrofitapp.data.ExerciseRepository
 import com.vlados.retrofitapp.data.TrainingPlanRepository
-import com.vlados.retrofitapp.ui.BottomSheetViewModel
+import com.vlados.retrofitapp.ui.AddExerciseToPlanBottomSheetViewModel
 import dagger.Module
 import dagger.Provides
 
@@ -12,7 +12,7 @@ class BottomSheetViewModelModule {
     fun provideBottomSheetViewModel(
         exerciseListRepository: ExerciseRepository,
         trainingPlanRepository: TrainingPlanRepository
-    ): BottomSheetViewModel {
-        return BottomSheetViewModel(exerciseListRepository, trainingPlanRepository)
+    ): AddExerciseToPlanBottomSheetViewModel {
+        return AddExerciseToPlanBottomSheetViewModel(exerciseListRepository, trainingPlanRepository)
     }
 }

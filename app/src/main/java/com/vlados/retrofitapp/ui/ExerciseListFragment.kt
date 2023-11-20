@@ -15,6 +15,7 @@ import com.vlados.retrofitapp.data.remote.retrofit.Exercise
 import com.vlados.retrofitapp.databinding.ExerciseListFragmentBinding
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class ExerciseListFragment : Fragment() {
@@ -42,7 +43,6 @@ class ExerciseListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //TODO реализовать обращение к аргументам (id)
         bindingClass?.elRecyclerView?.layoutManager = LinearLayoutManager(requireContext())
         bindingClass?.elRecyclerView?.adapter = exerciseAdapter
         bindingClass?.elRecyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -64,6 +64,7 @@ class ExerciseListFragment : Fragment() {
         super.onStart()
         exerciseViewModel.updateExerciseList()
         val disposable = exerciseViewModel.getExerciseListFlow()
+            .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 {
@@ -79,19 +80,13 @@ class ExerciseListFragment : Fragment() {
         compositeDisposable.clear()
     }
 
-//TODO в onStop сделать отписку от потока
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         bindingClass = null
     }
 
-    private fun addToPlan(item: Exercise) {
-        val bottomSheetFragment = BottomSheetFragment()
-        val bundle = Bundle()
-        bundle.putInt("Exercise id", item.id)
-        bottomSheetFragment.arguments = bundle
-        bottomSheetFragment.show(childFragmentManager, "my bottom sheet")
+    private fun addToPlan(itemId: Int) {
+        val addExerciseToPlanBottomSheetFragment = AddExerciseToPlanBottomSheetFragment.create(itemId)
+        addExerciseToPlanBottomSheetFragment.show(childFragmentManager, "my bottom sheet")
     }
 }

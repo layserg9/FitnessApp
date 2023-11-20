@@ -34,7 +34,7 @@ class ExerciseRepository @Inject constructor(
             )
     }
 
-    fun getExerciseById(id: Int): Exercise? {
+    fun getExerciseById(id: Int?): Exercise? {
         return localDataSource.findExerciseById(id)
     }
 }

@@ -73,7 +73,4 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.48'
     implementation 'javax.inject:javax.inject:1'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.48'
-
-    //loading indicator
-
 }

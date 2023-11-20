@@ -4,5 +4,8 @@ enum class Weekdays(val dayName: String) {
     MONDAY("Понедельник"),
     TUESDAY("Вторник"),
     WEDNESDAY("Среда"),
-    THURSDAY("Четверг")
+    THURSDAY("Четверг"),
+    FRIDAY("Пятница"),
+    SATURDAY("Суббота"),
+    SUNDAY("Воскресенье")
 }

@@ -32,7 +32,7 @@ class ExerciseLocalDataSource @Inject constructor() {
 //            currentList.size
 //        }
     }
-    fun findExerciseById(id: Int):Exercise?{
+    fun findExerciseById(id: Int?):Exercise?{
         val currentList = exerciseListProcessor.value
         return currentList?.find { it.id == id }
     }

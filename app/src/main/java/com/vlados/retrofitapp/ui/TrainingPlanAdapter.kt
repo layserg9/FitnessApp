@@ -65,5 +65,4 @@ class TrainingPlanAdapter() :
     override fun getItemCount(): Int {
         return currentList.size
     }
-
 }

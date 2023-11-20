@@ -9,8 +9,10 @@ import dagger.Provides
 @Module
 object ExerciseRepositoryModule {
     @Provides
-fun provideRepository(localDataSource: ExerciseLocalDataSource, remoteDataSource: ExerciseRemoteDataSource)
-: ExerciseRepository {
-return ExerciseRepository(localDataSource, remoteDataSource)
-}
+    fun provideRepository(
+        localDataSource: ExerciseLocalDataSource,
+        remoteDataSource: ExerciseRemoteDataSource
+    ): ExerciseRepository {
+        return ExerciseRepository(localDataSource, remoteDataSource)
+    }
 }
