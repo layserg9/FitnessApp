@@ -7,7 +7,7 @@
     tools:context=".ui.ExerciseListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/el_recycler_view"
+        android:id="@+id/training_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
