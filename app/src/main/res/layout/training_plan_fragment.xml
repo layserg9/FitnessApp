@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ExerciseListFragment">
+    tools:context=".ui.TrainingPlanFragment">
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/training_recycler_view"
+        android:id="@+id/training_plan_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"

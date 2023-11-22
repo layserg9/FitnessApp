@@ -59,19 +59,16 @@ class ExerciseListFragment : Fragment() {
         })
     }
 
-    @SuppressLint("CheckResult")
     override fun onStart() {
         super.onStart()
         exerciseViewModel.updateExerciseList()
         val disposable = exerciseViewModel.getExerciseListFlow()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                {
-                    Log.d("FITNESS_APP", "$it")
-                    exerciseAdapter.submitList(it)
-                }
-            )
+            .subscribe {
+                Log.d("FITNESS_APP", "$it")
+                exerciseAdapter.submitList(it)
+            }
         compositeDisposable.add(disposable)
     }
 
@@ -86,7 +83,8 @@ class ExerciseListFragment : Fragment() {
     }
 
     private fun addToPlan(itemId: Int) {
-        val addExerciseToPlanBottomSheetFragment = AddExerciseToPlanBottomSheetFragment.create(itemId)
+        val addExerciseToPlanBottomSheetFragment =
+            AddExerciseToPlanBottomSheetFragment.create(itemId)
         addExerciseToPlanBottomSheetFragment.show(childFragmentManager, "my bottom sheet")
     }
 }
