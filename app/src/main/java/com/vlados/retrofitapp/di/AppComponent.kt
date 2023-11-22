@@ -7,10 +7,8 @@ import com.vlados.retrofitapp.di.ExerciseList.ExerciseRepositoryModule
 import com.vlados.retrofitapp.di.ExerciseList.ExerciseViewModelModule
 import com.vlados.retrofitapp.di.TrainingPlan.TrainingPlanLocalDataSourceModule
 import com.vlados.retrofitapp.di.TrainingPlan.TrainingPlanRepositoryModule
-import com.vlados.retrofitapp.ui.AddExerciseToPlanBottomSheetFragment
-import com.vlados.retrofitapp.ui.AddExerciseToPlanBottomSheetViewModel
-import com.vlados.retrofitapp.ui.ExerciseListFragment
-import com.vlados.retrofitapp.ui.ExerciseViewModel
+import com.vlados.retrofitapp.di.TrainingPlan.TrainingPlanViewModelModule
+import com.vlados.retrofitapp.ui.*
 import dagger.Component
 import javax.inject.Singleton
 
@@ -24,13 +22,15 @@ import javax.inject.Singleton
         BottomSheetViewModelModule::class,
         RemoteDataSourceModule::class,
         TrainingPlanLocalDataSourceModule::class,
-        TrainingPlanRepositoryModule::class]
+        TrainingPlanRepositoryModule::class,
+        TrainingPlanViewModelModule::class]
 )
 
 interface AppComponent {
     fun bottomSheetViewModel(): AddExerciseToPlanBottomSheetViewModel
     fun exerciseViewModel(): ExerciseViewModel
-
+    fun trainingPlanViewModel(): TrainingPlanViewModel
     fun inject(fragment: ExerciseListFragment)
     fun inject(fragment: AddExerciseToPlanBottomSheetFragment)
+    fun inject(fragment: TrainingPlanFragment)
 }

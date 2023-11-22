@@ -12,7 +12,6 @@ class AddExerciseToPlanBottomSheetViewModel @Inject constructor(
 ) : ViewModel() {
     val weekdaysArray: Array<String> = Weekdays.values().map { it.dayName }.toTypedArray()
 
-
     fun addExerciseToPlan(dayName: String, selectedExerciseId: Int?) {
         val selectedDay = Weekdays.values().find { it.dayName == dayName }
         val exercise = exerciseListRepository.getExerciseById(selectedExerciseId)

@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.exercise_list,
-                R.id.test_list
+                R.id.training_plan
             )
         )
 

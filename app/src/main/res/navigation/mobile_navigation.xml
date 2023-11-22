@@ -12,10 +12,9 @@
     </fragment>
 
     <fragment
-        android:id="@+id/test_list"
-        android:name="com.vlados.retrofitapp.ui.TestFragment"
-        tools:layout="@layout/test_list_fragment" >
+        android:id="@+id/training_plan"
+        android:name="com.vlados.retrofitapp.ui.TrainingPlanFragment"
+        tools:layout="@layout/training_plan_fragment" >
     </fragment>
-
 
 </navigation>

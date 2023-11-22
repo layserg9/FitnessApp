@@ -14,7 +14,7 @@ import com.vlados.retrofitapp.databinding.AddExerciseToPlanBottomSheetFragmentBi
 import javax.inject.Inject
 
 class AddExerciseToPlanBottomSheetFragment : BottomSheetDialogFragment() {
-    private var addExerciseToPlanBottomSheetBinding: AddExerciseToPlanBottomSheetFragmentBinding? = null
+    private var viewBinding: AddExerciseToPlanBottomSheetFragmentBinding? = null
     private var selectedExerciseId: Int? = null
 
     @Inject
@@ -30,15 +30,16 @@ class AddExerciseToPlanBottomSheetFragment : BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        addExerciseToPlanBottomSheetBinding = AddExerciseToPlanBottomSheetFragmentBinding.inflate(
-            inflater, container, false)
-        return addExerciseToPlanBottomSheetBinding?.root
+        viewBinding = AddExerciseToPlanBottomSheetFragmentBinding.inflate(
+            inflater, container, false
+        )
+        return viewBinding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         selectedExerciseId = arguments?.getInt(KEY_FOR_SEARCHING_BY_ARGUMENTS, 0)
         super.onViewCreated(view, savedInstanceState)
-        addExerciseToPlanBottomSheetBinding?.bottomSheetButtonClose?.setOnClickListener {
+        viewBinding?.bottomSheetButtonClose?.setOnClickListener {
             dismiss()
         }
         val spinnerArrayAdapter: ArrayAdapter<String> = ArrayAdapter<String>(
@@ -47,16 +48,21 @@ class AddExerciseToPlanBottomSheetFragment : BottomSheetDialogFragment() {
             viewModel.weekdaysArray
         )
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
-        addExerciseToPlanBottomSheetBinding?.spinnerWeekdays?.adapter = spinnerArrayAdapter
+        viewBinding?.spinnerWeekdays?.adapter = spinnerArrayAdapter
     }
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
-        val selectedDay = addExerciseToPlanBottomSheetBinding?.spinnerWeekdays?.selectedItem as String
+        val selectedDay = viewBinding?.spinnerWeekdays?.selectedItem as String
         viewModel.addExerciseToPlan(selectedDay, selectedExerciseId)
     }
-    companion object{
-        
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        viewBinding = null
+    }
+
+    companion object {
         const val KEY_FOR_SEARCHING_BY_ARGUMENTS = "Exercise id"
         fun create(itemId: Int) = AddExerciseToPlanBottomSheetFragment().apply {
             arguments = bundleOf(KEY_FOR_SEARCHING_BY_ARGUMENTS to itemId)

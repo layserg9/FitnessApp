@@ -6,9 +6,9 @@
         android:title="Список упражнений"
         android:orderInCategory="1" />
 
-    <item android:id="@+id/test_list"
+    <item android:id="@+id/training_plan"
         android:icon="@drawable/training_days"
-        android:title="Тренировочные дни"
+        android:title="План тренировок"
         android:orderInCategory="2" />
 
 </menu>
