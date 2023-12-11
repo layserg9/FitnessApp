@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.vlados.retrofitapp.data.remote.retrofit.ExerciseImage
 
-public class ImagesTypeConverter {
+class ImagesTypeConverter {
     @TypeConverter
     fun fromImages(images: List<ExerciseImage>): String {
         return Gson().toJson(images)

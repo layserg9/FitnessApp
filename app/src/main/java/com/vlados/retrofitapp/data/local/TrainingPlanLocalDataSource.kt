@@ -1,7 +1,7 @@
 package com.vlados.retrofitapp.data.local
 
 import android.util.Log
-import com.vlados.retrofitapp.data.ExerciseDataBase
+import com.vlados.retrofitapp.data.ExerciseDao
 import com.vlados.retrofitapp.data.ExerciseEntity
 import com.vlados.retrofitapp.data.ImagesTypeConverter
 import com.vlados.retrofitapp.data.Weekdays
@@ -13,46 +13,37 @@ import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class TrainingPlanLocalDataSource @Inject constructor(
-    private val exerciseDataBase: ExerciseDataBase
+    private val exerciseDao: ExerciseDao
 ) {
     private val trainingPlanMapProcessor = BehaviorProcessor.create<Map<Weekdays, Set<Exercise>>>()
-    private val exerciseDao = exerciseDataBase.getExerciseDao()
     private val imagesTypeConverter = ImagesTypeConverter()
 
     init {
-        Completable.fromAction {
+        runOnIoScheduler {
             val exerciseEntitiesFromDataBase: List<ExerciseEntity> = exerciseDao.getAllItems()
-
-            Log.d("MyDataBase", "DAO getAllItems: $exerciseEntitiesFromDataBase")
-
-            val exerciseEntitiesToListPair =
-                exerciseEntitiesFromDataBase.groupBy { exerciseEntity -> exerciseEntity.weekDay }
-                    .filter { (weekDay) ->
-                        weekDay < Weekdays.values().size && weekDay >= 0
-                    }
-                    .flatMap { (weekDay, listExerciseEntity) ->
-                        listExerciseEntity.map { exerciseEntity ->
-                            Weekdays.values()[weekDay] to Exercise(
-                                id = exerciseEntity.id,
-                                name = exerciseEntity.name,
-                                description = exerciseEntity.description,
-                                images = imagesTypeConverter.toImages(exerciseEntity.images)
-                            )
+            val exercisesMap =
+                exerciseEntitiesFromDataBase.groupBy(
+                    { exerciseEntity ->
+                        val weekDay = exerciseEntity.weekDay
+                        if (weekDay < Weekdays.values().size && weekDay >= 0) {
+                            Weekdays.values()[weekDay]
+                        } else {
+                            Weekdays.MONDAY
                         }
+                    },
+                    { exerciseEntity ->
+                        Exercise(
+                            id = exerciseEntity.id,
+                            name = exerciseEntity.name,
+                            description = exerciseEntity.description,
+                            images = imagesTypeConverter.toImages(exerciseEntity.images)
+                        )
                     }
-
-            Log.d("MyDataBase", "Entity to listPair: $exerciseEntitiesToListPair")
-
-            val listPairToMap = exerciseEntitiesToListPair
-                .groupBy({ it.first }, { it.second })
-                .mapValues { (_, exercises) -> exercises.toSet() }
-                .toSortedMap()
-            trainingPlanMapProcessor.onNext(listPairToMap)
-
-            Log.d("MyDataBase", "Получаем из БД: ${listPairToMap.toString()}")
+                )
+                    .mapValues { (_, exercises) -> exercises.toSet() }
+                    .toSortedMap()
+            trainingPlanMapProcessor.onNext(exercisesMap)
         }
-            .subscribeOn(Schedulers.io())
-            .subscribe()
     }
 
     fun getTrainingPlanMapFlow(): Flowable<Map<Weekdays, Set<Exercise>>> {
@@ -66,18 +57,14 @@ class TrainingPlanLocalDataSource @Inject constructor(
         currentMap[weekDay] = exerciseSet
         trainingPlanMapProcessor.onNext(currentMap)
         addExerciseToDataBase(currentMap)
-
-        Log.d("MyDataBase", "Добавляем в PlanMap: $currentMap")
     }
 
-    private fun addExerciseToDataBase(listOfExercises: Map<Weekdays, Set<Exercise>>) {
-        Completable.fromAction {
-            exerciseDao.insertItems(convertListPairToListEntity(convertMapToList(listOfExercises)))
-
-            Log.d("MyDataBase", "Добавляем в БД: $listOfExercises")
+    private fun addExerciseToDataBase(mapOfExercises: Map<Weekdays, Set<Exercise>>) {
+        runOnIoScheduler {
+            val listPair = convertMapToList(mapOfExercises)
+            val listExerciseEntity = convertListPairToListEntity(listPair)
+            exerciseDao.insertItems(listExerciseEntity)
         }
-            .subscribeOn(Schedulers.io())
-            .subscribe()
     }
 
     private fun convertMapToList(
@@ -100,5 +87,9 @@ class TrainingPlanLocalDataSource @Inject constructor(
                 weekDay = weekday.ordinal
             )
         }
+    }
+
+    private fun runOnIoScheduler(action: () -> Unit) {
+        Completable.fromAction(action).subscribeOn(Schedulers.io()).subscribe()
     }
 }

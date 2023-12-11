@@ -83,7 +83,8 @@ class ExerciseListFragment : Fragment() {
     }
 
     private fun addToPlan(itemId: Int) {
-        val bsFragment = AddExerciseToPlanBottomSheetFragment.create(itemId)
-        bsFragment.show(childFragmentManager, "my bottom sheet")
+        AddExerciseToPlanBottomSheetFragment
+            .create(itemId)
+            .show(childFragmentManager, "my bottom sheet")
     }
 }

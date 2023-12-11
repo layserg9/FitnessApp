@@ -16,11 +16,7 @@ class ExerciseViewModel @Inject constructor(
     fun getExerciseListFlow(): Flowable<List<Exercise>> {
         return repository.getExerciseListFlow()
     }
-    //TODO конвертация flowable List<Exercise> -> List<ExerciseViewState> через .map
-    //TODO тут же можно добавить лоадер в конец списка + отфильтровать по языку
-
-//    если есть некст - добавь лоадер
-//    если нет - нет
+    //TODO тут же можно добавить лоадер в конец списка(if next = true) + отфильтровать по языку
 
     fun updateExerciseList() {
         repository.updateExerciseList()

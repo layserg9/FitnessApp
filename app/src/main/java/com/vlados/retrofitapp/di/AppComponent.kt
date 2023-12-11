@@ -20,6 +20,7 @@ import javax.inject.Singleton
         ExerciseLocalDataSourceModule::class,
         ExerciseRepositoryModule::class,
         ExerciseDataBaseModule::class,
+        ExerciseDaoModule::class,
         BottomSheetViewModelModule::class,
         RemoteDataSourceModule::class,
         TrainingPlanLocalDataSourceModule::class,
