@@ -1,5 +1,6 @@
 package com.vlados.retrofitapp.di.TrainingPlan
 
+import com.vlados.retrofitapp.data.ExerciseDao
 import com.vlados.retrofitapp.data.ExerciseDataBase
 import com.vlados.retrofitapp.data.local.TrainingPlanLocalDataSource
 import dagger.Module
@@ -12,8 +13,8 @@ object TrainingPlanLocalDataSourceModule {
     @Singleton
     @Provides
     fun provideLocalDataSource(
-        exerciseDataBase: ExerciseDataBase
+        exerciseDao: ExerciseDao
     ): TrainingPlanLocalDataSource {
-        return TrainingPlanLocalDataSource(exerciseDataBase)
+        return TrainingPlanLocalDataSource(exerciseDao)
     }
 }

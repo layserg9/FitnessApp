@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
     entities = [ExerciseEntity::class],
     version = 1
 )
-@TypeConverters(ImagesTypeConverter:: class)
+@TypeConverters(ImagesTypeConverter::class)
 
 abstract class ExerciseDataBase : RoomDatabase() {
     abstract fun getExerciseDao(): ExerciseDao
