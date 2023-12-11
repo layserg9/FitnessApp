@@ -38,4 +38,3 @@ class ExerciseRepository @Inject constructor(
         return localDataSource.findExerciseById(id)
     }
 }
-

@@ -16,7 +16,7 @@ class AddExerciseToPlanBottomSheetViewModel @Inject constructor(
         val selectedDay = Weekdays.values().find { it.dayName == dayName }
         val exercise = exerciseListRepository.getExerciseById(selectedExerciseId)
         if (selectedDay != null && exercise != null) {
-            trainingPlanRepository.addExerciseToTrainingPlanMap(selectedDay, listOf(exercise))
+            trainingPlanRepository.addExerciseToTrainingPlanMap(selectedDay, setOf(exercise))
         }
     }
 }
