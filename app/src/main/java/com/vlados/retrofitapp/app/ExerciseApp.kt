@@ -4,9 +4,7 @@ import android.app.Application
 import com.vlados.retrofitapp.di.AppComponent
 import com.vlados.retrofitapp.di.DaggerAppComponent
 
-
-class ExerciseApp: Application() {
-
+class ExerciseApp : Application() {
     companion object {
         lateinit var appComponent: AppComponent
             private set
@@ -14,6 +12,9 @@ class ExerciseApp: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        appComponent = DaggerAppComponent.create()
+        appComponent = DaggerAppComponent
+            .builder()
+            .context(applicationContext)
+            .build()
     }
 }

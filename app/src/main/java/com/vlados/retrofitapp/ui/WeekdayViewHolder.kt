@@ -4,7 +4,6 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.vlados.retrofitapp.databinding.WeekdayItemBinding
 
-
 class WeekdayViewHolder(item: View) : RecyclerView.ViewHolder(item) {
     private val viewBinding = WeekdayItemBinding.bind(item)
 

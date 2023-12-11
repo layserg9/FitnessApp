@@ -1,5 +1,6 @@
 package com.vlados.retrofitapp.data.remote.retrofit
 
-data class ExcerciseImage(
+data class ExerciseImage(
     val image: String
 )
+

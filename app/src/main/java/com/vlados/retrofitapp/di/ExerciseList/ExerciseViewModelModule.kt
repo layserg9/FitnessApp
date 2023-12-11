@@ -1,5 +1,6 @@
 package com.vlados.retrofitapp.di.ExerciseList
 
+import com.vlados.retrofitapp.data.ExerciseDataBase
 import com.vlados.retrofitapp.data.ExerciseRepository
 import com.vlados.retrofitapp.ui.ExerciseViewModel
 import dagger.Module

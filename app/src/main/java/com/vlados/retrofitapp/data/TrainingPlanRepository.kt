@@ -8,11 +8,11 @@ import javax.inject.Inject
 class TrainingPlanRepository @Inject constructor(
     private val localDataSource: TrainingPlanLocalDataSource
 ) {
-    fun getTrainingPlanMapFlow(): Flowable<Map<Weekdays, List<Exercise>>>{
+    fun getTrainingPlanMapFlow(): Flowable<Map<Weekdays, Set<Exercise>>>{
         return localDataSource.getTrainingPlanMapFlow()
     }
 
-    fun addExerciseToTrainingPlanMap(weekDay: Weekdays, exercise: List<Exercise>){
+    fun addExerciseToTrainingPlanMap(weekDay: Weekdays, exercise: Set<Exercise>){
         localDataSource.addExerciseToTrainingPlanMap(weekDay, exercise)
     }
 }

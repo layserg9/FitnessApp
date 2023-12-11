@@ -12,8 +12,7 @@ class TrainingPlanViewModel @Inject constructor(
 ) {
 
     fun getTrainingPlanList(): Flowable<List<ListItem>> {
-        val flowableMap = trainingPlanRepository.getTrainingPlanMapFlow()
-        val mapToList = flowableMap.map { sourceMap ->
+        return trainingPlanRepository.getTrainingPlanMapFlow().map { sourceMap ->
             val resultList = mutableListOf<ListItem>()
             for (entry in sourceMap) {
                 val exercises = entry.value
@@ -27,10 +26,9 @@ class TrainingPlanViewModel @Inject constructor(
                 }
                 resultList.add(ListItem.WeekDaysViewState(entry.key.name))
                 resultList.addAll(exerciseViewStateList)
-                }
-            resultList.toList()
             }
-        return mapToList
+            resultList.toList()
+        }
     }
 }
 
