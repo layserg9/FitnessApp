@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import androidx.compose.runtime.mutableStateOf
 import androidx.core.os.bundleOf
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vlados.retrofitapp.app.ExerciseApp
@@ -16,6 +16,7 @@ import javax.inject.Inject
 class AddExerciseToPlanBottomSheetFragment : BottomSheetDialogFragment() {
     private var viewBinding: AddExerciseToPlanBottomSheetFragmentBinding? = null
     private var selectedExerciseId: Int? = null
+    private val trainingDay = mutableStateOf("")
 
     @Inject
     lateinit var viewModel: AddExerciseToPlanBottomSheetViewModel
@@ -39,22 +40,18 @@ class AddExerciseToPlanBottomSheetFragment : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         selectedExerciseId = arguments?.getInt(KEY_FOR_SEARCHING_BY_ARGUMENTS, 0)
         super.onViewCreated(view, savedInstanceState)
-        viewBinding?.bottomSheetButtonClose?.setOnClickListener {
-            dismiss()
+        viewBinding?.composeView?.setContent {
+            ComposeBottomSheet(
+                viewModel.weekdaysArray,
+                ::dismiss,
+                trainingDay
+            )
         }
-        val spinnerArrayAdapter: ArrayAdapter<String> = ArrayAdapter<String>(
-            requireContext(),
-            android.R.layout.simple_spinner_item,
-            viewModel.weekdaysArray
-        )
-        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
-        viewBinding?.spinnerWeekdays?.adapter = spinnerArrayAdapter
     }
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
-        val selectedDay = viewBinding?.spinnerWeekdays?.selectedItem as String
-        viewModel.addExerciseToPlan(selectedDay, selectedExerciseId)
+        viewModel.addExerciseToPlan(trainingDay.value, selectedExerciseId)
     }
 
     override fun onDestroyView() {
