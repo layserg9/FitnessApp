@@ -13,9 +13,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-
 @Composable
-fun ComposeBottomSheet(
+fun AddExerciseToPlanComposeBottomSheet(
     weekdays: Array<String>,
     dismiss: () -> Unit,
     trainingDay: MutableState<String>
@@ -35,7 +34,7 @@ fun ComposeBottomSheet(
                 fontSize = 20.sp
             )
             IconButton(
-                onClick = { dismiss() },
+                onClick = dismiss,
                 content = {
                     Image(
                         painterResource(id = R.drawable.ic_delete),
@@ -50,7 +49,7 @@ fun ComposeBottomSheet(
             modifier = Modifier
                 .fillMaxWidth()
         ) {
-            DropdownMenuCompose(weekdays, trainingDay)
+            WeekDaysMenuWidget(weekdays, trainingDay)
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.vlados.retrofitapp.ui
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.vlados.retrofitapp.data.ExerciseRepository
 import com.vlados.retrofitapp.data.TrainingPlanRepository
@@ -10,6 +11,7 @@ class AddExerciseToPlanBottomSheetViewModel @Inject constructor(
     private val exerciseListRepository: ExerciseRepository,
     private val trainingPlanRepository: TrainingPlanRepository
 ) : ViewModel() {
+    val trainingDay = mutableStateOf("")
     val weekdaysArray: Array<String> = Weekdays.values().map { it.dayName }.toTypedArray()
 
     fun addExerciseToPlan(dayName: String, selectedExerciseId: Int?) {

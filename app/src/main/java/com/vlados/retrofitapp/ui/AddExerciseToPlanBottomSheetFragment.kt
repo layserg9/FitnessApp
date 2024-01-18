@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.runtime.mutableStateOf
 import androidx.core.os.bundleOf
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vlados.retrofitapp.app.ExerciseApp
@@ -16,7 +15,6 @@ import javax.inject.Inject
 class AddExerciseToPlanBottomSheetFragment : BottomSheetDialogFragment() {
     private var viewBinding: AddExerciseToPlanBottomSheetFragmentBinding? = null
     private var selectedExerciseId: Int? = null
-    private val trainingDay = mutableStateOf("")
 
     @Inject
     lateinit var viewModel: AddExerciseToPlanBottomSheetViewModel
@@ -41,17 +39,17 @@ class AddExerciseToPlanBottomSheetFragment : BottomSheetDialogFragment() {
         selectedExerciseId = arguments?.getInt(KEY_FOR_SEARCHING_BY_ARGUMENTS, 0)
         super.onViewCreated(view, savedInstanceState)
         viewBinding?.composeView?.setContent {
-            ComposeBottomSheet(
+            AddExerciseToPlanComposeBottomSheet(
                 viewModel.weekdaysArray,
                 ::dismiss,
-                trainingDay
+                viewModel.trainingDay
             )
         }
     }
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
-        viewModel.addExerciseToPlan(trainingDay.value, selectedExerciseId)
+        viewModel.addExerciseToPlan(viewModel.trainingDay.value, selectedExerciseId)
     }
 
     override fun onDestroyView() {
