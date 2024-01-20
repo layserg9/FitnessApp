@@ -5,8 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.vlados.retrofitapp.R
+import com.vlados.retrofitapp.data.Weekdays
 
-class TrainingPlanAdapter() :
+class TrainingPlanAdapter(
+    private val deleteFromPlan: (Int, Weekdays) -> Unit
+) :
     androidx.recyclerview.widget.ListAdapter<ListItem, RecyclerView.ViewHolder>(
         ExerciseComparator()
     ) {
@@ -39,7 +42,7 @@ class TrainingPlanAdapter() :
         return when (viewType) {
             EXERCISE_CONTENT -> {
                 val exerciseView = inflater.inflate(R.layout.exercise_item, parent, false)
-                ExerciseViewHolder(exerciseView) {}
+                ExerciseViewHolder(exerciseView)
             }
             WEEKDAY_CONTENT -> {
                 val weekdayView = inflater.inflate(R.layout.weekday_item, parent, false)
@@ -57,7 +60,7 @@ class TrainingPlanAdapter() :
             EXERCISE_CONTENT -> {
                 val correctViewHolder: ExerciseViewHolder? = holder as? ExerciseViewHolder
                 val elementOfList = currentList[position] as ListItem.ExerciseViewState
-                correctViewHolder?.bind(elementOfList)
+                correctViewHolder?.bindForTrainingPlanAdapter(elementOfList, deleteFromPlan)
             }
             WEEKDAY_CONTENT -> {
                 val correctViewHolder: WeekdayViewHolder? = holder as? WeekdayViewHolder

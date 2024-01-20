@@ -64,7 +64,13 @@
                     tools:layout_editor_absoluteX="93dp"
                     tools:layout_editor_absoluteY="372dp" />
             </LinearLayout>
-
+            <ImageButton
+                android:id="@+id/image_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/close_button"
+                />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
