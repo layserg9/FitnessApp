@@ -61,13 +61,10 @@ class TrainingPlanLocalDataSource @Inject constructor(
     fun deleteExerciseFromTrainingPlanMap(weekDay: Weekdays, exercise: Exercise) {
         val currentMap = trainingPlanMapProcessor.value?.toMutableMap() ?: mutableMapOf()
         val exerciseSet = currentMap[weekDay]?.toMutableSet() ?: mutableSetOf()
-        val exerciseInDataSource = exerciseSet.find { it.id == exercise.id }
-        if (exerciseInDataSource != null) {
-            exerciseSet.remove(exercise)
-            currentMap[weekDay] = exerciseSet
-            trainingPlanMapProcessor.onNext(currentMap)
-            deleteExerciseFromDataBase(weekDay, exercise)
-        }
+        exerciseSet.remove(exercise)
+        currentMap[weekDay] = exerciseSet
+        trainingPlanMapProcessor.onNext(currentMap)
+        deleteExerciseFromDataBase(weekDay, exercise)
     }
 
     private fun addExerciseToDataBase(mapOfExercises: Map<Weekdays, Set<Exercise>>) {

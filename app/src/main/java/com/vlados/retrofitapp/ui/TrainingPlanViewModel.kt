@@ -35,10 +35,8 @@ class TrainingPlanViewModel @Inject constructor(
     }
 
     fun deleteExerciseFromPlanList(dayName: Weekdays, selectedExerciseId: Int?) {
-        val exercise = exerciseListRepository.getExerciseById(selectedExerciseId)
-        if (exercise != null) {
-            trainingPlanRepository.deleteExerciseFromTrainingPlanMap(dayName, exercise)
-        }
+        val exercise = exerciseListRepository.getExerciseById(selectedExerciseId) ?: return
+        trainingPlanRepository.deleteExerciseFromTrainingPlanMap(dayName, exercise)
     }
 }
 

@@ -29,10 +29,8 @@ class ExerciseAdapter(
     }
 
     override fun onBindViewHolder(holder: ExerciseViewHolder, position: Int) {
-        val exercise: Exercise? = currentList.getOrNull(position)
-        if (exercise != null) {
-            holder.bindForExerciseAdapter(exercise, addExercise)
-        }
+        val exercise: Exercise = currentList.getOrNull(position) ?: return
+        holder.bindForExerciseAdapter(exercise, addExercise)
     }
 
     override fun getItemCount(): Int {

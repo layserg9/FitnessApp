@@ -50,10 +50,11 @@ class ExerciseListFragment : Fragment() {
                 val visibleItemCount = layoutManager.childCount
                 val totalItemCount = layoutManager.itemCount
                 val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
-                if (
+                val reachedEndOfList: Boolean =
                     (visibleItemCount + firstVisibleItemPosition) >= totalItemCount
-                    && firstVisibleItemPosition >= 0
-                ) {
+                val firstVisibleItemPositionNotZero: Boolean = firstVisibleItemPosition >= 0
+                val lastItemInTheList: Boolean = reachedEndOfList && firstVisibleItemPositionNotZero
+                if (lastItemInTheList) {
                     exerciseViewModel.updateExerciseList()
                 }
             }
