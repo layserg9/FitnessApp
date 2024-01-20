@@ -1,6 +1,5 @@
 package com.vlados.retrofitapp.data.local
 
-import android.util.Log
 import com.vlados.retrofitapp.data.ExerciseDao
 import com.vlados.retrofitapp.data.ExerciseEntity
 import com.vlados.retrofitapp.data.ImagesTypeConverter
@@ -59,11 +58,30 @@ class TrainingPlanLocalDataSource @Inject constructor(
         addExerciseToDataBase(currentMap)
     }
 
+    fun deleteExerciseFromTrainingPlanMap(weekDay: Weekdays, exercise: Exercise) {
+        val currentMap = trainingPlanMapProcessor.value?.toMutableMap() ?: mutableMapOf()
+        val exerciseSet = currentMap[weekDay]?.toMutableSet() ?: mutableSetOf()
+        val exerciseInDataSource = exerciseSet.find { it.id == exercise.id }
+        if (exerciseInDataSource != null) {
+            exerciseSet.remove(exercise)
+            currentMap[weekDay] = exerciseSet
+            trainingPlanMapProcessor.onNext(currentMap)
+            deleteExerciseFromDataBase(weekDay, exercise)
+        }
+    }
+
     private fun addExerciseToDataBase(mapOfExercises: Map<Weekdays, Set<Exercise>>) {
         runOnIoScheduler {
             val listPair = convertMapToList(mapOfExercises)
             val listExerciseEntity = convertListPairToListEntity(listPair)
             exerciseDao.insertItems(listExerciseEntity)
+        }
+    }
+
+    private fun deleteExerciseFromDataBase(weekDay: Weekdays, exercise: Exercise) {
+        runOnIoScheduler {
+            val exerciseEntity = getExerciseEntity(weekDay, exercise)
+            exerciseDao.deleteItems(exerciseEntity)
         }
     }
 
@@ -91,5 +109,15 @@ class TrainingPlanLocalDataSource @Inject constructor(
 
     private fun runOnIoScheduler(action: () -> Unit) {
         Completable.fromAction(action).subscribeOn(Schedulers.io()).subscribe()
+    }
+
+    private fun getExerciseEntity(weekday: Weekdays, exercise: Exercise): ExerciseEntity {
+        return ExerciseEntity(
+            id = exercise.id,
+            name = exercise.name,
+            description = exercise.description,
+            images = imagesTypeConverter.fromImages(exercise.images),
+            weekDay = weekday.ordinal
+        )
     }
 }

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.vlados.retrofitapp.app.ExerciseApp
+import com.vlados.retrofitapp.data.Weekdays
 import com.vlados.retrofitapp.databinding.TrainingPlanFragmentBinding
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -16,7 +17,7 @@ import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class TrainingPlanFragment : Fragment() {
-    private val trainingPlanAdapter: TrainingPlanAdapter = TrainingPlanAdapter()
+    private val trainingPlanAdapter = TrainingPlanAdapter(::deleteFromPlan)
     private var binding: TrainingPlanFragmentBinding? = null
     private val compositeDisposable = CompositeDisposable()
 
@@ -52,7 +53,7 @@ class TrainingPlanFragment : Fragment() {
                 Log.d("FITNESS_APP", "$it")
                 trainingPlanAdapter.submitList(it)
             }
-            compositeDisposable.add(disposable)
+        compositeDisposable.add(disposable)
     }
 
     override fun onStop() {
@@ -63,5 +64,12 @@ class TrainingPlanFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
+    }
+
+    private fun deleteFromPlan(itemId: Int, weekday: Weekdays) {
+        trainingPlanViewModel.deleteExerciseFromPlanList(
+            weekday,
+            selectedExerciseId = itemId
+        )
     }
 }

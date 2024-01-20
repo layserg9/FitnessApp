@@ -5,18 +5,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.vlados.retrofitapp.R
+import com.vlados.retrofitapp.data.Weekdays
 import com.vlados.retrofitapp.data.remote.retrofit.Exercise
 import com.vlados.retrofitapp.databinding.ExerciseItemBinding
 
-class ExerciseViewHolder(item: View, private val addToPlan: (Int) -> Unit) :
+class ExerciseViewHolder(
+    item: View,
+) :
     RecyclerView.ViewHolder(item) {
-    private val baseUrl = "https://wger.de"
     private val viewBinding = ExerciseItemBinding.bind(item)
 
-    fun bind(exercise: Exercise) {
+    fun bindForExerciseAdapter(exercise: Exercise, onExerciseClick: (Int) -> Unit) {
         viewBinding.nameOfExercise.text = exercise.name
         viewBinding.descriptionOfExercise.text = exercise.description
-        itemView.setOnClickListener { addToPlan(exercise.id) }
+        itemView.setOnClickListener { onExerciseClick(exercise.id) }
         val image = exercise.images.getOrNull(0)?.image
         if (image != null) {
             Glide.with(itemView.context)
@@ -29,9 +31,15 @@ class ExerciseViewHolder(item: View, private val addToPlan: (Int) -> Unit) :
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                 .into(viewBinding.imageViewExerciseItem)
         }
+        viewBinding.imageButton.setImageResource(R.drawable.add_exercise)
+        viewBinding.imageButton.setOnClickListener { onExerciseClick(exercise.id) }
+
     }
 
-    fun bind(exercise: ListItem.ExerciseViewState) {
+    fun bindForTrainingPlanAdapter(
+        exercise: ListItem.ExerciseViewState,
+        onExerciseClick: (Int, Weekdays) -> Unit
+    ) {
         viewBinding.nameOfExercise.text = exercise.name
         viewBinding.descriptionOfExercise.text = exercise.description
         val image = exercise.image
@@ -45,6 +53,13 @@ class ExerciseViewHolder(item: View, private val addToPlan: (Int) -> Unit) :
                 .load(R.drawable.no_exercise_image)
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                 .into(viewBinding.imageViewExerciseItem)
+        }
+        viewBinding.imageButton.setImageResource(R.drawable.delete_exercise)
+        viewBinding.imageButton.setOnClickListener {
+            onExerciseClick(
+                exercise.id,
+                exercise.weekday
+            )
         }
     }
 }

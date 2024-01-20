@@ -15,4 +15,7 @@ class TrainingPlanRepository @Inject constructor(
     fun addExerciseToTrainingPlanMap(weekDay: Weekdays, exercise: Set<Exercise>){
         localDataSource.addExerciseToTrainingPlanMap(weekDay, exercise)
     }
+    fun deleteExerciseFromTrainingPlanMap(weekDay: Weekdays, exercise: Exercise){
+        localDataSource.deleteExerciseFromTrainingPlanMap(weekDay, exercise)
+    }
 }

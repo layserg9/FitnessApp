@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.ListAdapter
 import com.vlados.retrofitapp.R
 import com.vlados.retrofitapp.data.remote.retrofit.Exercise
 
-class ExerciseAdapter(private val addToPlan: (Int) -> Unit) :
+class ExerciseAdapter(
+    private val addExercise: (Int) -> Unit
+) :
     ListAdapter<Exercise, ExerciseViewHolder>(ExerciseComparator()) {
 
     class ExerciseComparator : DiffUtil.ItemCallback<Exercise>() {
@@ -23,13 +25,13 @@ class ExerciseAdapter(private val addToPlan: (Int) -> Unit) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseViewHolder {
         val exerciseView =
             LayoutInflater.from(parent.context).inflate(R.layout.exercise_item, parent, false)
-        return ExerciseViewHolder(exerciseView, addToPlan)
+        return ExerciseViewHolder(exerciseView)
     }
 
     override fun onBindViewHolder(holder: ExerciseViewHolder, position: Int) {
         val exercise: Exercise? = currentList.getOrNull(position)
         if (exercise != null) {
-            holder.bind(exercise)
+            holder.bindForExerciseAdapter(exercise, addExercise)
         }
     }
 

@@ -1,14 +1,14 @@
 package com.vlados.retrofitapp.ui
 
+import com.vlados.retrofitapp.data.ExerciseRepository
 import com.vlados.retrofitapp.data.TrainingPlanRepository
 import com.vlados.retrofitapp.data.Weekdays
-import com.vlados.retrofitapp.data.remote.retrofit.Exercise
 import io.reactivex.Flowable
 import javax.inject.Inject
 
-
 class TrainingPlanViewModel @Inject constructor(
-    private val trainingPlanRepository: TrainingPlanRepository
+    private val trainingPlanRepository: TrainingPlanRepository,
+    private val exerciseListRepository: ExerciseRepository
 ) {
 
     fun getTrainingPlanList(): Flowable<List<ListItem>> {
@@ -21,13 +21,23 @@ class TrainingPlanViewModel @Inject constructor(
                         id = exercise.id,
                         name = exercise.name,
                         description = exercise.description,
-                        image = exercise.images.getOrNull(0)?.image
+                        image = exercise.images.getOrNull(0)?.image,
+                        weekday = entry.key
                     )
                 }
-                resultList.add(ListItem.WeekDaysViewState(entry.key.name))
-                resultList.addAll(exerciseViewStateList)
+                if (exerciseViewStateList.isNotEmpty()) {
+                    resultList.add(ListItem.WeekDaysViewState(entry.key.name))
+                    resultList.addAll(exerciseViewStateList)
+                }
             }
             resultList.toList()
+        }
+    }
+
+    fun deleteExerciseFromPlanList(dayName: Weekdays, selectedExerciseId: Int?) {
+        val exercise = exerciseListRepository.getExerciseById(selectedExerciseId)
+        if (exercise != null) {
+            trainingPlanRepository.deleteExerciseFromTrainingPlanMap(dayName, exercise)
         }
     }
 }

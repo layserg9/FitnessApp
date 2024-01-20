@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun DropdownMenuCompose(
+fun WeekDaysMenuWidget(
     weekdays: Array<String>,
     trainingDay: MutableState<String>
 ) {
